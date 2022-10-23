@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: linear-gradient(90deg, #fc00ff, #00dbde);
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 2.5rem;
+  min-height: 20vh;
+}
+
+.header h1 {
+  font-family: "Pattaya", sans-serif;
+}
+
+.alert {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: fadein 0.3s ease-in;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.alert p {
+  text-align: center;
+  background-color: #e74c3c;
+  color: #fff;
+  width: 500px;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+form {
+  min-height: 10vh;
+}
+
+.header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.6rem 1rem;
+  font-size: 2rem;
+  border: none;
+  background-color: #fff;
+  outline: none;
+}
+
+form button {
+  color: #a04ff2;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #a04ff2;
+  color: #fff;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  list-style: none;
+  min-width: 30%;
+}
+
+.todo {
+  margin: 0.6rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.complete-btn {
+  background-color: #27ae60;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+}
+
+.complete-btn,
+.remove-btn {
+  padding: 1rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.todo-item {
+  padding: 0rem 0.7rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: #76eca7;
+  font-style: italic;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  font-family: "Poppins", sans-serif;
+  color: #a04ff2;
+  width: 14rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #a04ff2;
+  top: 0;
+  right: 0;
+  padding: 1.1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background-color: #fff;
+  color: #a04ff2;
+}
