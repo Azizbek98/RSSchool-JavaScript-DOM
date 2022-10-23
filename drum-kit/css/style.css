@@ -1,0 +1,275 @@
+* {
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-background {
+  --background-color-main: #fff;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--background-color-main);
+}
+
+.header {
+  --background-color: #45aaf2;
+  color: #fff;
+  background-color: var(--background-color);
+  padding: 20px 0;
+}
+
+.header-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-container__left {
+  width: 30%;
+  text-align: left;
+}
+
+.header-container__center {
+  text-align: center;
+  width: 40%;
+}
+
+.header-container__center h1 {
+  margin: 0;
+  padding: 5px;
+  font-size: 30px;
+}
+
+.header-container__right {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main .keys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .key {
+  --key-color: #3867d6;
+  border: 0.4rem solid var(--key-color);
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  -webkit-transition: all 0.07s ease;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(56, 103, 214, 0.4);
+  text-shadow: 0 0 0.5rem black;
+}
+
+.main .playing {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-color: #ffc600;
+  -webkit-box-shadow: 0 0 1rem #ffc600;
+          box-shadow: 0 0 1rem #ffc600;
+}
+
+.main kbd {
+  display: block;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.main .sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+  cursor: pointer;
+}
+
+.footer {
+  --background-color: #45aaf2;
+  color: #fff;
+  background-color: var(--background-color);
+  padding: 8px 0;
+}
+
+.footer-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-container__left {
+  width: 50%;
+  text-align: left;
+}
+
+.footer-container__right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.theme-switch__input,
+.theme-switch__label {
+  position: absolute;
+  z-index: 1;
+}
+
+.theme-switch__input {
+  opacity: 0;
+}
+
+.theme-switch__input:hover + .theme-switch__label, .theme-switch__input:focus + .theme-switch__label {
+  background-color: lightSlateGray;
+}
+
+.theme-switch__input:hover + .theme-switch__label span::after, .theme-switch__input:focus + .theme-switch__label span::after {
+  background-color: #d4ebf2;
+}
+
+.theme-switch__label {
+  padding: 20px;
+  margin: 20px;
+  right: 5%;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+  width: 110px;
+  height: 30px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: slateGray;
+  -webkit-box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+          box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.theme-switch__label::before, .theme-switch__label::after {
+  font-size: 2rem;
+  position: absolute;
+  -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+  top: 50%;
+}
+
+.theme-switch__label::before {
+  content: "\263C";
+  right: 100%;
+  margin-right: 10px;
+  color: orange;
+}
+
+.theme-switch__label::after {
+  content: "\263E";
+  left: 100%;
+  margin-left: 10px;
+  color: lightSlateGray;
+}
+
+.theme-switch__label span {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+}
+
+.theme-switch__label span::after {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  content: "";
+  border-radius: 50%;
+  background-color: lightBlue;
+  -webkit-transition: background-color 200ms, -webkit-transform 200ms;
+  transition: background-color 200ms, -webkit-transform 200ms;
+  transition: transform 200ms, background-color 200ms;
+  transition: transform 200ms, background-color 200ms, -webkit-transform 200ms;
+  -webkit-box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.theme-switch__input:checked ~ .theme-switch__label {
+  background-color: lightSlateGray;
+}
+
+.theme-switch__input:checked ~ .theme-switch__label::before {
+  color: lightSlateGray;
+}
+
+.theme-switch__input:checked ~ .theme-switch__label::after {
+  color: turquoise;
+}
+
+.theme-switch__input:checked ~ .theme-switch__label span::after {
+  -webkit-transform: translate3d(70px, 0, 0);
+          transform: translate3d(70px, 0, 0);
+}
+
+.theme-switch__input:checked ~ .main-background {
+  --background-color-main: #7f8c8d;
+}
+
+.theme-switch__input:checked ~ .main-background .header,
+.theme-switch__input:checked ~ .main-background .footer {
+  --background-color: #34495e;
+}
+
+.theme-switch__input:checked ~ .main-background .main .key {
+  --key-color: #34495e;
+  background: rgba(52, 73, 94, 0.4);
+}
+/*# sourceMappingURL=style.css.map */
