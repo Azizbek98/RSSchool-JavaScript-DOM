@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  background-color: #25282a;
+  color: #fff;
+}
+
+.slider {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 7px 15px;
+}
+
+.container {
+  padding-top: 50px;
+  max-width: 60%;
+  position: relative;
+  margin: auto;
+}
+
+.navigation-container {
+  padding-top: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 60%;
+}
+
+.slider-caption {
+  margin: 0;
+  font-size: 1em;
+  animation: fadeUp 0.3s ease-in;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 4px 2px;
+  background-color: #71abff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #fff;
+}
+
+.active,
+.dot:active {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    padding-top: 15px;
+    opacity: 0;
+  }
+  to {
+    padding-top: 0;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 92%;
+  }
+  .navigation-container {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 92%;
+  }
+
+  .slider-caption {
+    padding-top: 15px;
+    font-size: 0.8em;
+  }
+
+  .slider-dots {
+    padding-top: 10px;
+    text-align: center;
+  }
+}
