@@ -1,1 +1,1 @@
-# news-JS
+# News-JS
